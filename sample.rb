@@ -1,17 +1,12 @@
+# coding: utf-8
 require 'dxruby'
+include 'functions'
 
 image = Image.load('resources/images/lucky.png')
 image_tree = Image.load('resources/images/tree_with_background.png')
 
 scale = 1;
 
-
-# 迷路作成(top:1, right:2, bottom:3, left:4)
-# WALL=0, FLOOR=1
-WALL = 0
-FLOOR = 1
-WIDTH = 31
-HEIGHT = 21
 
 a = Array.new(WIDTH*HEIGHT)
 
@@ -57,7 +52,6 @@ for j in 0 .. WIDTH - 1 do
   end
 end
 
-
 #2段目以降
 for i in 1 .. HEIGHT - 1 do
   if i%2 == 1 then
@@ -88,13 +82,17 @@ for i in 1 .. HEIGHT - 1 do
   end
 end
 
+# ラッキーの位置を決定する
+setLucky(a)
+
 
 Window.loop do
   for i in 0 .. HEIGHT - 1 do
     for j in 0 .. WIDTH - 1do
       if a[i*WIDTH + j] == WALL then
         Window.draw(j * 20, i * 20, image_tree);
-      else
+      elsif a[i*WIDTH+j] == LUCKY_ON_FLOOR then
+        Window.draw(j * 20, i * 20, image)
       end
     end
   end
@@ -105,4 +103,5 @@ Window.loop do
     scale = 1;
   end
 end
+
 
