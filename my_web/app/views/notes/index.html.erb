@@ -13,16 +13,9 @@
   </thead>
 
   <tbody>
-    <div class="genre">
-      Genre 1
-    </div>
-    <div class="rectangle">
-      Rectangle
-    </div>
     <div class="desktop">
-      <div class="texts">
-	<div class="texts_frame">
-	  <% @notes.each do |note| %>
+      <div class="text">
+	<% @notes.each do |note| %>
 	  <tr>
 	    <td><%= note.genre %></td>
 	    <td><%= note.title %></td>
@@ -32,11 +25,11 @@
 	    <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	  </tr>
 	  <% end %>
-	</div>
       </div>
       <div class="genres">
 	<div class="genre">
 	  <div class="genre_frame">
+	    <%= image_tag 'genre01.png', :size => '70x70' %>
 	  </div>
 	</div>
 	<div class="genres_frame">
@@ -44,6 +37,7 @@
       </div>
       <div class="title">
 	<div class="title_frame">
+	  <%= image_tag 'title01.png', :size => '500x130' %>
 	</div>
 	<div class="title_string">
 	  actommy
