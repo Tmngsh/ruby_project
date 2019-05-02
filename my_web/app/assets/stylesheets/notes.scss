@@ -18,3 +18,112 @@
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
+
+/* desktop */
+.desktop {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+
+    background: #FFFFFF;
+}
+
+/* texts */
+.texts {
+    position: absolute;
+    width: 1200px;
+    height: 400px;
+    left: 120px;
+    top: 350px;
+
+    background: #FFFFFF;
+}
+
+/* texts_frame */
+.texts_frame {
+    position: absolute;
+    width: 1200px;
+    height: 400px;
+    left: 0px;
+    top: 0px;
+
+    background: #FFFFFF;
+    border: 2px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+/* genres */
+.genres {
+    position: absolute;
+    width: 1000px;
+    height: 70px;
+    left: 220px;
+    top: 225px;
+
+    background: #FFFFFF;
+}
+
+/* genre */
+.genre {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 465px;
+    top: 0px;
+
+    background: #FFFFFF;
+}
+
+/* genre_frame */
+.genre_frame {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: 0px;
+    top: 0px;
+
+    background: url(genre01.png);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* title */
+.title {
+    position: absolute;
+    width: 500px;
+    height: 130px;
+    left: 470px;
+    top: 20px;
+
+    background: #FFFFFF;
+}
+
+/* title_frame */
+.title_frame {
+    position: absolute;
+    width: 500px;
+    height: 130px;
+    left: 0px;
+    top: 0px;
+    
+    background: url(title01.png);
+}
+/* title_string */
+.title_string {
+    position: absolute;
+    width: 500px;
+    height: 130px;
+    left: 0px;
+    top: 2px;
+
+    font-family: Megrim;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+    line-height: 112px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #000000;
+}
