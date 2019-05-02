@@ -31,7 +31,7 @@
   <div class="genres">
     <div class="genre">
       <div class="genre_frame">
-	<%= image_tag 'genre01.png', :size => '70x70' %>
+	<%= link_to image_tag('genre01.png', :size => '70x70'), controller: :pokemon, action: :index %>
       </div>
     </div>
     <div class="genres_frame">
@@ -40,6 +40,7 @@
   <div class="title">
     <div class="title_frame">
       <%= image_tag 'title01.png', :size => '500x130' %>
+      <%= link_to 'Pokemon', controller: :pokemon, action: :index %>
     </div>
     <div class="title_string">
       actommy
