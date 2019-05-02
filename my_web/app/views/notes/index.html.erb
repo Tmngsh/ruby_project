@@ -2,50 +2,50 @@
 
 <h1>Notes</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Genre</th>
-      <th>Title</th>
-      <th>Detail</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="desktop">
+  <div class="text">
+    <table>
+      <thead>
+	<tr>
+	  <th>Genre</th>
+	  <th>Title</th>
+	  <th>Detail</th>
+	  <th colspan="3"></th>
+	</tr>
+      </thead>
 
-  <tbody>
-    <div class="desktop">
-      <div class="text">
+      <tbody>
 	<% @notes.each do |note| %>
-	  <tr>
-	    <td><%= note.genre %></td>
-	    <td><%= note.title %></td>
-	    <td><%= note.detail %></td>
-	    <td><%= link_to 'Show', note %></td>
-	    <td><%= link_to 'Edit', edit_note_path(note) %></td>
-	    <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	  </tr>
-	  <% end %>
-      </div>
-      <div class="genres">
-	<div class="genre">
-	  <div class="genre_frame">
-	    <%= image_tag 'genre01.png', :size => '70x70' %>
-	  </div>
-	</div>
-	<div class="genres_frame">
-	</div>
-      </div>
-      <div class="title">
-	<div class="title_frame">
-	  <%= image_tag 'title01.png', :size => '500x130' %>
-	</div>
-	<div class="title_string">
-	  actommy
-	</div>
+	<tr>
+	  <td><%= note.genre %></td>
+	  <td><%= note.title %></td>
+	  <td><%= note.detail %></td>
+	  <td><%= link_to 'Show', note %></td>
+	  <td><%= link_to 'Edit', edit_note_path(note) %></td>
+	  <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	</tr>
+	<% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="genres">
+    <div class="genre">
+      <div class="genre_frame">
+	<%= image_tag 'genre01.png', :size => '70x70' %>
       </div>
     </div>
-  </tbody>
-</table>
+    <div class="genres_frame">
+    </div>
+  </div>
+  <div class="title">
+    <div class="title_frame">
+      <%= image_tag 'title01.png', :size => '500x130' %>
+    </div>
+    <div class="title_string">
+      actommy
+    </div>
+  </div>
+</div>
 
 <br>
 
